@@ -143,6 +143,7 @@
     <ClCompile Include="command.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="flyweight.cpp" />
+    <ClCompile Include="observer.cpp" />
     <ClCompile Include="singleton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
