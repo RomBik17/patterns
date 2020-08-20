@@ -140,7 +140,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="abstract_factory.cpp" />
+    <ClCompile Include="command.cpp" />
     <ClCompile Include="factory.cpp" />
+    <ClCompile Include="flyweight.cpp" />
     <ClCompile Include="singleton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
