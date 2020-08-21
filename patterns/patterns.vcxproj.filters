@@ -33,5 +33,11 @@
     <ClCompile Include="observer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
