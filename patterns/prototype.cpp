@@ -7,7 +7,7 @@ public:
 	virtual ~Monster() {}
 	virtual Monster* clone() = 0;
 
-	// Другие вещи...
+	//Other code...
 };
 
 class Ghost : public Monster
