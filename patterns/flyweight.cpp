@@ -27,5 +27,5 @@ class World
 private:
 	Terrain* tiles_[WIDTH][HEIGHT];
 
-	// Другие вещи...
+	//Other code...
 };

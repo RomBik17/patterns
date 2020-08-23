@@ -8,7 +8,7 @@ public:
     virtual void onNotify(const Entity& entity, Event event) = 0;
 };
 
-//очивка по падению с моста как пример
+//Achievement for falling from a bridge as an example
 class Achievements : public Observer
 {
 public:
@@ -20,13 +20,13 @@ public:
             }
             break;
 
-            // Обработка остальных событий и обновление heroIsOnBridge_...
+            //Processing of other events and updating heroIsOnBridge_...
         }
     }
 
 private:
     void unlock(Achievement achievement) {
-        // Разблокирование если не было разблокировано раньше...
+        //Unlock achievement if it was locked...
     }
 
     bool heroIsOnBridge_;
@@ -36,14 +36,14 @@ class Subject
 {
 public:
     void addObserver(Observer* observer) {
-        // Добавление в массив...
+        //Adding in array
     }
 
     void removeObserver(Observer* observer) {
-        // Удаление из массива...
+        //Remove from array...
     }
 
-    // Другие вещи...
+    //Other code...
 
 protected:
     void notify(const Entity& entity, Event event) {
@@ -57,7 +57,7 @@ private:
     int numObservers_;
 };
 
-//пример вызова
+//Call example
 void Physics::updateBody(PhysicsBody& body)
 {
     bool wasOnSurface = body.isOnSurface();

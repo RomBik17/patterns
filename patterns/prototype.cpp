@@ -27,7 +27,7 @@ private:
 	int speed_;
 };
 
-//без шаблонов
+//Without templates
 class Spawner
 {
 public:
@@ -45,7 +45,7 @@ private:
 
 
 
-//через шаблоны
+//With templates
 class Spawner
 {
 public:

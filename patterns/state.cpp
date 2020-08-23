@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-//состояние героя
+//Hero's state
 class HeroState
 {
 public:
@@ -10,7 +10,6 @@ public:
 	virtual void update(Hero& hero) {}
 };
 
-//состояние погружения в воду
 class DuckingState : public HeroState
 {
 public:
@@ -19,7 +18,7 @@ public:
 
     virtual void handleInput(Hero& hero, Input input) {
         if (input == RELEASE_DOWN) {
-            // Переход в состояние стояния...
+            //Changing state from ducking to standing 
             hero.setGraphics(IMAGE_STAND);
         }
     }
@@ -35,7 +34,7 @@ private:
     int chargeTime_;
 };
 
-//делегирование к состоянию
+//Delegation to the state
 class Hero
 {
 public:
@@ -47,14 +46,14 @@ public:
         state_->update(*this);
     }
 
-    // Другие методы...
+    //Other methods...
 private:
     HeroState* state_;
 };
 
 
 
-/*статическое состояние
+/*Static state
 class HeroineState
 {
 public:
@@ -63,10 +62,10 @@ public:
     static JumpingState jumping;
     static DivingState diving;
 
-    // Остальной код...
+    //Other code...
 };
 
-//изминение состояния
+//Changing our state
 if (input == PRESS_B)
 {
     heroine.state_ = &HeroineState::jumping;
@@ -76,10 +75,10 @@ if (input == PRESS_B)
 
 
 
-/*экземпляры соостояний
+/*Instances of states
 void Heroine::handleInput(Input input)
 {
-    //если меняеться состояние, то мы удаляем старое, но только после того как оно закончиться
+    //If state changes, we'll delete an old one, but only after it will end the work
     HeroineState* state = state_->handleInput(*this, input);
     if (state != NULL) {
         delete state_;
@@ -102,7 +101,7 @@ HeroineState* StandingState::handleInput(Heroine& heroine, Input input)
 
 
 
-/*добавление входного действия
+/*Adding enter action
 class StandingState : public HeroineState
 {
 public:
@@ -120,7 +119,7 @@ void Heroine::handleInput(Input input)
         delete state_;
         state_ = state;
 
-        // Вызов входного действия нового состояния.
+        //Calling enter action of state
         state_->enter(*this);
     }
 }

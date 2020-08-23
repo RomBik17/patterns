@@ -6,21 +6,21 @@ double previous = getCurrentTime();
 double lag = 0.0;
 while (true) {
     double current = getCurrentTime();
-    //время между кадрами
+    //Time between frames
     double elapsed = current - previous;
     previous = current;
-    //время с начала игры
+    //Time from beginning
     lag += elapsed;
 
     processInput();
 
-    //симулируем те вычисления, которые пропустились изза рендеринга, чтобы все вычисления были плавными
+    //We simulate the calculations that we missed because of rendering, to keep image on screen smooth
     while (lag >= MS_PER_UPDATE) {
         update();
-        //вычисляем поока не компенсируем разницу времени
+        //Calculate until we compensate for the time difference
         lag -= MS_PER_UPDATE;
     }
 
-    //рендерим с того момента, где остановились, чтобы не было дерганой картинки
+    //Start to render from the momemt when we stopped, to keep image on screen smooth
     render(lag / MS_PER_UPDATE);
 }

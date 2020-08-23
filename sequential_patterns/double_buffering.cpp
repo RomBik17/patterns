@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-//приблиэительная графическая подсистема вывода пикселей в бефер обмена
+//Approximate graphical pixel output subsystem to the clipboard
 class Framebuffer
 {
 public:
@@ -36,7 +36,7 @@ public:
         next_(&buffers_[1])
     {}
 
-    //отрисовываем следующий кадр, и меняем буфера местами
+    //The next frame is stripped, and the buffer is swapped
     void draw() {
         next_->clear();
 

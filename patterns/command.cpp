@@ -28,11 +28,11 @@ public:
 		if (isPressed(BUTTON_A)) return buttonA_;
 		if (isPressed(BUTTON_B)) return buttonB_;
 
-		// Если ничего не передано, то ничего и не делаем.
+		//If mothing is transfered, we don't do anything
 		return NULL;
 	}
 
-	// Методы для привязки команд...
+	//Methods for binding commands...
 
 private:
 	Command* buttonX_;
@@ -53,7 +53,7 @@ void example()
 
 
 
-//отмена действий
+//Cancellation of actions
 class MoveUnitCommand : public Command
 {
 public:
@@ -63,8 +63,8 @@ public:
 	{}
 
 	virtual void execute() {
-		// Запоминаем позицию юнита перед ходом
-		// чтобы потом ее восстановить.
+		//Remember unit's position before the move
+		//To restore it later
 		xBefore_ = unit_->x();
 		yBefore_ = unit_->y();
 
@@ -83,22 +83,22 @@ private:
 
 Command* handleInput()
 {
-	// Выбираем юнит...
+	//Choose unit...
 	Unit* unit = getSelectedUnit();
 
 	if (isPressed(BUTTON_UP)) {
-		// Перемещаем юнит на единицу вверх.
+		//Moving unit by 1 up
 		int destY = unit->y() — 1;
 		return new MoveUnitCommand(unit, unit->x(), destY);
 	}
 
 	if (isPressed(BUTTON_DOWN)) {
-		// Перемещаем юнит на единицу вниз.
+		//Moving unit by 1 down
 		int destY = unit->y() + 1;
 		return new MoveUnitCommand(unit, unit->x(), destY);
 	}
 
-	// Другие шаги...
+	//Other code...
 
 	return NULL;
 }
