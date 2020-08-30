@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bytecode.cpp" />
+    <ClCompile Include="interpretator.cpp" />
     <ClCompile Include="subclass_sandbox.cpp" />
     <ClCompile Include="type_object.cpp" />
   </ItemGroup>

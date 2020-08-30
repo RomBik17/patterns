@@ -24,5 +24,8 @@
     <ClCompile Include="type_object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="interpretator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
