@@ -39,7 +39,7 @@ public:
 
 			case INST_SET_WISDOM: {}
 			case INST_SET_AGILITY: {}
-			//Аналогично, как сверху...
+			//Same as above...
 
 			case INST_PLAY_SOUND:
 				playSound(pop());
@@ -51,7 +51,7 @@ public:
 			}
 			case INST_LITERAL:
 			{
-				//Считываем следующий байт из байткода.
+				//We read the next byte from the bytecode.
 				int value = bytecode[++i];
 				push(value);
 				break;
@@ -68,13 +68,13 @@ public:
 
 private:
 	void push(int value) {
-		// Поверяем переполнение стека.
+		//Check the stackoverflow
 		assert(stackSize_ < MAX_STACK);
 		stack_[stackSize_++] = value;
 	}
 
 	int pop() {
-		// Проверяем что стек не пустой.
+		//We check that the stack is not empty.
 		assert(stackSize_ > 0);
 		return stack_[--stackSize_];
 	}
