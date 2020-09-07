@@ -12,7 +12,7 @@ public:
 
 	void update(World& world, Graphics& graphics)
 	{
-		// Применяем пользовательский ввод к скорости героя.
+		//Applying custom input to hero speed.
 		switch (Controller::getJoystickDirection())
 		{
 		case DIR_LEFT:
@@ -24,11 +24,11 @@ public:
 			break;
 		}
 
-		// Изменение позиции на скорость.
+		//Change of position to speed.
 		x_ += velocity_;
 		world.resolveCollision(volume_, x_, y_, velocity_);
 
-		// Отрисовка соответствующего спрайта.
+		//Rendering the corresponding sprite.
 		Sprite* sprite = &spriteStand_;
 		if (velocity_ < 0) {
 			sprite = &spriteWalkLeft_;
