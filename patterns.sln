@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sequential_patterns", "sequ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_patterns", "behavior_patterns\behavior_patterns.vcxproj", "{C32C00D0-CB7C-41E1-B6CE-DC313239639A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduced_connectivity_patterns", "reduced_connectivity_patterns\reduced_connectivity_patterns.vcxproj", "{B84477A1-B984-4A3E-A5B7-801E638C3F47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{C32C00D0-CB7C-41E1-B6CE-DC313239639A}.Release|x64.Build.0 = Release|x64
 		{C32C00D0-CB7C-41E1-B6CE-DC313239639A}.Release|x86.ActiveCfg = Release|Win32
 		{C32C00D0-CB7C-41E1-B6CE-DC313239639A}.Release|x86.Build.0 = Release|Win32
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Debug|x64.ActiveCfg = Debug|x64
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Debug|x64.Build.0 = Debug|x64
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Debug|x86.ActiveCfg = Debug|Win32
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Debug|x86.Build.0 = Debug|Win32
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Release|x64.ActiveCfg = Release|x64
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Release|x64.Build.0 = Release|x64
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Release|x86.ActiveCfg = Release|Win32
+		{B84477A1-B984-4A3E-A5B7-801E638C3F47}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
